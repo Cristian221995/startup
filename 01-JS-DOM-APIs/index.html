@@ -10,15 +10,20 @@
     <script src="js/script.js"></script>
     <title>Topic 1 JS.</title>
 </head>
-<body>
+<body onload="fadeInOnLoad()">
     <h1>Topic 1: JavaScript, and DOM APIs</h1>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ut obcaecati beatae vitae, in rerum dolorum ratione consequatur, nihil nemo explicabo ipsa nisi? Numquam alias excepturi corporis inventore ratione. Excepturi!</p>
    
-    <section class="hidden" id="hide" onload="fadeInOnLoad()">
+    <section class="" id="hide" >
         <h2>Hello World</h2>
     </section>
-    <button onclick="alerta()">alerta</button>
-    
+
+    <section id="jokeContainer">
+            <button onclick="getJokePromise()" name="button"> Click here for some Chuck Norris jokes </button>
+            <div id="joke">
+                <!-- the joke will display here -->
+            </div>
+    </section>
     
 </body>
 </html>
