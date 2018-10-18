@@ -9,23 +9,6 @@ function fadeInOnLoad(){  //fade in "Hello World" on load.
   function alerta(){
     alert("Warning");
   }
-
-  function getData() {    //Get random joke form API
-    var xhr = new XMLHttpRequest();
-  
-    xhr.onreadystatechange = function() {
-      if(xhr.readyState == 4 && xhr.status==200)
-      {
-        console.log("received the response", xhr.responseText);
-        let response = JSON.parse(xhr.response);
-        document.getElementById("joke").innerHTML = response.value.joke;
-      } else {
-          console.log("error in processing the request");
-      }
-    }
-    xhr.open("GET","http://api.icndb.com/jokes/random",true);
-    xhr.send();
-  }
   
   //  info source = https://medium.com/front-end-hacking/ajax-async-callback-promise-e98f8074ebd7
   function getJokePromise(){   //Get random joke from API
