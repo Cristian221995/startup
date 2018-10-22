@@ -1,9 +1,8 @@
-function fadeInOnLoad(){  //fade in "Hello World" on load.
+function fadeInOnLoad(){ 
     setInterval( function() {
       let element = document.getElementById("hide");
       element.classList.add("hidden");
-    },500);
-    
+    },500); 
   }
 
   function alerta(){
@@ -48,3 +47,25 @@ function fadeInOnLoad(){  //fade in "Hello World" on load.
   function errorHandler(statusCode){   //Show  'jokeContainer' section background in red when a server error occurs.
     document.getElementById('jokeContainer').element.style.backgroundColor = "red";
   }
+
+  function searchJavascript(){ //Get javasript repositories from renderGitHub API.
+    let url = "https://api.github.com/search/repositories?q=php";
+    makeAjaxCall(url,"GET").then(generate_table,errorHandler);
+	}
+
+function search(){    //Get data from github repositories API so the user can perform search for any repository.
+    let search = document.getElementById("Search");
+    let url = "https://api.github.com/search/repositories";
+    url += "?q="+ search.value;
+
+    makeAjaxCall(url,"GET").then(renderGitHub,errorHandler);
+	}
+
+function renderGitHub(gitData){ //Send data from github repositories API to HTML.
+  let list = document.getElementById("list");
+  for (let repo of gitData.items){
+    let repoName = document.createElement('li');
+    repoName.innerHTML = repo.full_name;
+    list.appendChild(repoName);
+  }
+}
