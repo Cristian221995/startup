@@ -1,7 +1,7 @@
 function fadeInOnLoad(){ 
     setInterval( function() {
       let element = document.getElementById("hide");
-      element.classList.add("hidden");
+      element.classList.remove("hidden");
     },500); 
   }
 
@@ -68,4 +68,27 @@ function renderGitHub(gitData){ //Send data from github repositories API to HTML
     repoName.innerHTML = repo.full_name;
     list.appendChild(repoName);
   }
+}
+
+function generateMatrix() {
+  return [ [ 1, 2 ,3 ], [ 4, 5 ,6], [ 7, 8 ,9 ] ];
+}
+
+function generateTableFromMatrix(matrix){
+  let table = document.createElement("table");
+  for (let x = 0; x < matrix.length; x++){
+    let tr = document.createElement("tr");
+    for (let y = 0; y < matrix[x].length; y++){
+      let td = document.createElement("td");
+      let textNode = document.createTextNode(matrix[x][y]);
+      td.appendChild(textNode);
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
+  }
+  document.getElementById("matrix").appendChild(table);
+}
+
+function generateTable(){
+  generateTableFromMatrix(generateMatrix());
 }
