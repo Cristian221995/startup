@@ -1,5 +1,6 @@
-class Movie {
+class Movie extends EventEmmiter {
     constructor(title, year, duration) {
+        super();
         this.title = title,
         this.year = year,
         this.duration = duration
