@@ -29,10 +29,6 @@ class Movie extends EventEmmiter {
         }
     }   
 }
-    
-var theDarkNight = new Movie("The Dark Night", 2012, "2hs");
-
-theDarkNight.play;
 
 class Actor{
     constructor(name,age){
@@ -41,7 +37,6 @@ class Actor{
     }
 };
 
-var actor1 = new Actor("Christian Bale", 30);
 
 class EventEmmiter {
     constructor(){
@@ -75,8 +70,6 @@ class EventEmmiter {
     }
 }
 
-
-
 class Logger{
     constructor(){
     }
@@ -86,8 +79,24 @@ class Logger{
     }
 }
 
+var theDarkNight = new Movie("The Dark Night", 2012, "2hs");
+
+theDarkNight.play;
+
+var actor1 = new Actor("Christian Bale", 30);
+
 var logger = new Logger();
 theDarkNight.on('play',logger.log);
 
 theDarkNight.addCast(actor1);
 theDarkNight.cast;
+
+
+let social = {  
+  share: function(friendName){
+    console.log(`Share ${this.title} with ${friendName}.`);
+  },
+  like: function(friendName){
+    console.log(`${friendName} likes ${this.title}.`);
+  }
+};
