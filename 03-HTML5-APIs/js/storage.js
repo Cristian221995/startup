@@ -55,7 +55,7 @@ function openLocalStorage(){
 
 function addObjectLS(){
     var text=document.getElementById("textToSave").value;
-    localStorage.setItem(textToSave);
+    localStorage.setItem(text, textToSave);
 }
 
 function deleteLocalStorage(){

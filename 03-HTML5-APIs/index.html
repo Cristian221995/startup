@@ -15,11 +15,11 @@
         <section>
           <div class="clearfix">
             <header>
-              <h2>1- Storages</h2>
+              <h2>1- Storages and 2 - Drag and Drop</h2>
             </header>
             <form action="#">
               <div>
-                <textarea name="textToSave" id="textToSave"></textarea>
+                <textarea name="textToSave" id="textToSave" ondragover="allowDrop(event)" ondrop="drop(event)"></textarea>
               </div>
               <div>
                 <button id="saveButton"> Save </button>
@@ -28,6 +28,8 @@
             </form>
           </div>
         </section>
-    
+
+    <script src="js/storage.js"></script>
+    <script src="js/draganddrop.js"></script>
 </body>
 </html>
