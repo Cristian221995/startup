@@ -22,8 +22,6 @@ function addObject(){
     var alm=transaccion.objectStore("text");
 
     var objectAdd=alm.add({textToSave: textToSave});
-
-    document.getElementById("textToSave").value="";
 }
 
 function deleteIndexedDB(){
@@ -54,8 +52,9 @@ function openLocalStorage(){
 }
 
 function addObjectLS(){
+    var key= "text";
     var text=document.getElementById("textToSave").value;
-    localStorage.setItem(text, textToSave);
+    localStorage.setItem(key,text);
 }
 
 function deleteLocalStorage(){

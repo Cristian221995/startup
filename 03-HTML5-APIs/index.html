@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="drawCanvas()">
         <h1>Topic 3 - HTML5 APIs</h1>
         <section>
           <div class="clearfix">
@@ -41,27 +41,30 @@
 
         <section>
             <h2>4- SVG </h2>
-          <svg height="130" width="200" align="center">
-            <defs>
+            <svg height="130" width="200" align="center">
+              <defs>
               <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
                 <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
               </linearGradient>
-            </defs>
-            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-            <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
-            <animateTransform attributeName="transform"
-                      type="scale"
-                      from="0 0" to="1 1"
-                      begin="0s" dur="10s"
-                      repeatCount=1
-            />
-            Sorry, your browser does not support inline SVG.
-          </svg>
+              </defs>
+              <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+              <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+              <animateTransform attributeName="transform" type="scale" from="0 0" to="1 1" begin="0s" dur="5s" repeatCount=1/>
+              Sorry, your browser does not support inline SVG.
+            </svg>
+        </section>
+
+        <section>
+          <h2>5- Canvas</h2>
+          <canvas id="myCanvas" width="850" height="700"
+          style="border:1px solid #000000;">
+          </canvas>
         </section>
 
     <script src="js/storage.js"></script>
     <script src="js/draganddrop.js"></script>
     <script src="js/websocket.js"></script>
+    <script src="js/canvas.js"></script>
 </body>
 </html>
