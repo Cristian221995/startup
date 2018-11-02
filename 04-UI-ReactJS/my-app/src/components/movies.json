@@ -1,0 +1,20 @@
+{
+    "movies":[
+        {
+            "title":"The Dark Night",
+            "year":"2012",
+            "duration":"120"
+        },
+        {
+            "title":"Avengers Infinity War",
+            "year":"2018",
+            "duration":"180"
+        },
+        {
+            "title":"Bohemian Rapsody",
+            "year":"2018",
+            "duration":"120"
+        }
+        
+    ]
+}
