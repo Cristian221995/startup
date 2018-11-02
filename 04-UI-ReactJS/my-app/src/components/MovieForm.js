@@ -30,7 +30,7 @@ class MovieForm extends Component{
         return(
             <div className="card column box">
                 <form onSubmit={this.handleSubmit}>
-                    <p>Add new Movie:</p>
+                    <p>{this.props.function}</p>
                     <div>
                         <input onChange={this.handleInput} type="text" name="title" placeholder="Titulo"></input>
                     </div>

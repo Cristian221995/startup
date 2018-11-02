@@ -18,6 +18,14 @@ class MovieList extends Component {
           })
         
       }
+      removeMovie(index){
+        this.setState({
+            mymovies:this.state.mymovies.filter((e,i)=>{
+                return i !== index
+            })
+        })
+      }
+
       render() {
         const movies=this.state.mymovies.map((movie,i) => {
           return(
@@ -29,14 +37,16 @@ class MovieList extends Component {
                   <p>Year: {movie.year}</p>
                   <p>Duration: {movie.duration}</p>
                 </div>
-    
+                <div>
+                    <button onClick={this.removeMovie.bind(this,i)}>Delete</button>
+                </div>
             </div>
     
           )
         })
         const App = () =>
         <div>
-         <MovieForm onAddMovie={this.addMovie}/>
+         <MovieForm function="Add movie:" onAddMovie={this.addMovie}/>
          {movies}
         </div>;
       return(
