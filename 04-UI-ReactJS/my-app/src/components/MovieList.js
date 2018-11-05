@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {movies} from './movies.json';
+import {movies} from '../movies.json';
 import MovieForm from './MovieForm';
 
 class MovieList extends Component {
