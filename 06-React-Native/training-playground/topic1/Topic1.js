@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 
 export default class Topic1 extends React.Component {
 
@@ -7,6 +7,14 @@ export default class Topic1 extends React.Component {
         return(
             <View style={styles.container}>
             <ScrollView style={{height:'100%',width:'100%', backgroundColor:'black'}}>
+            <Image
+            style={{width: '100%', height: 90}}
+            source={{uri: 'https://www.inovex.de/blog/wp-content/uploads/2018/03/react-native.png'}}
+            />
+            <Image
+            style={{width: '70%', height: 130}}
+                source={require('./react.png')}
+              />
             <Text style={{color: 'green'}}>My React Native App!
                 <Text style={styles.text1}>
                     Something..
@@ -26,6 +34,8 @@ export default class Topic1 extends React.Component {
                 <View style={{width:'70%',height:90,backgroundColor:'grey'}}/>
                 <View style={{width:'65%',height:130,backgroundColor:'pink'}}/>
                 <View style={{width:'30%',height:60,backgroundColor:'lightblue'}}/>
+
+              
             </ScrollView> 
             </View>
 
