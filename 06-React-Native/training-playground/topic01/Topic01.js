@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 
-export default class Topic1 extends React.Component {
+export default class Topic01 extends React.Component {
 
     render(){
         return(
